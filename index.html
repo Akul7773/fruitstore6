@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Store - eCommerce Website</title>
+    <link rel="stylesheet" href="ak.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Fruit Store</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" id="cartLink">Cart (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="search-section">
+        <input type="text" id="search-bar" placeholder="Search for fruits..." oninput="searchProduct()">
+    </section>
+
+    <section class="products">
+        <h2>Fresh Fruits</h2>
+        <!-- Mango Product -->
+        <div class="product-card" data-id="1">
+            <img src="OIP.jpg" alt="Mangoes">
+            <h3>Mangoes</h3>
+            <p>300&#8377 per KG</p>
+            <input type="number" min="5" value="5" class="product-quantity" data-id="1" >
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Banana Product -->
+        <div class="product-card" data-id="2">
+            <img src="OIP (1).jpg" alt="Bananas">
+            <h3>Bananas</h3>
+            <p>400&#8377 per KG</p>
+            <input type="number" min="5" value="5" class="product-quantity" data-id="2" >
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Apple Product -->
+        <div class="product-card" data-id="3">
+            <img src="download.jpg" alt="Apples">
+            <h3>Apples</h3>
+            <p>200&#8377 per KG</p>
+            <input type="number" min="5" value="5" class="product-quantity" data-id="3">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Dates Product -->
+        <div class="product-card" data-id="4">
+            <img src="download (1).jpg" alt="Dates">
+            <h3>Dates</h3>
+            <p>350&#8377 per KG</p>
+            <input type="number" min="5" value="5" class="product-quantity" data-id="4">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </section>
+
+    <!-- Cart Section on the Right Side -->
+    <section id="cart-section" class="cart-section" style="display:none;">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <h3>Total Price: $<span id="total-price">0</span></h3>
+        <button onclick="checkout()">Checkout</button>
+        <button onclick="closeCart()">Close Cart</button>
+    </section>
+
+    <!-- Location Access -->
+    <section id="location-section" class="location-section">
+        <button onclick="getLocation()">Get My Location</button>
+        <div id="location-result"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Fruit Store. All Rights Reserved.</p>
+    </footer>
+
+    <script src="ak.js"></script>
+</body>
+</html>
